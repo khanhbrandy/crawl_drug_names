@@ -10,7 +10,7 @@ from lxml import etree
 from io import StringIO
 
 parser = etree.HTMLParser()
-f = open('result.json') 
+f = open('ankhang.json') 
 data = json.load(f) 
 
 base_url="https://www.nhathuocankhang.com/aj/Category/Products"
@@ -26,7 +26,7 @@ for ele in data:
             drug_names[idx] = drug_names[idx].strip()
         result[k] = drug_names
         print(k, " : ", drug_names)
-with open("drug_names.json", 'w', encoding='utf8') as output:
+with open("ankhang_drugs.json", 'w', encoding='utf8') as output:
     json.dump(result, output, indent=4, ensure_ascii=False)
 
     

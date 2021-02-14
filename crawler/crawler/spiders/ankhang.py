@@ -10,7 +10,7 @@ from crawler.items import CrawlerItem
 import json
 
 class NhathuocAnKhang(scrapy.Spider):
-    name = "crawler"
+    name = "ankhang"
     def __init__(self):
         self.urls = {
                 'https://www.nhathuocankhang.com':'https://www.nhathuocankhang.com/thuoc',
